@@ -1,12 +1,11 @@
 #User function Template for python3
-#!/bin/python3
 
 """
 Selection Sort: https://practice.geeksforgeeks.org/problems/selection-sort/1
 """
 class Solution: 
     def selectionSort(self, arr,n):
-        for i in range(n-1):
+        for i in range(n):
             min_index = i
             
             for j in range(i+1, n):
