@@ -15,16 +15,15 @@ import sys
 #
 
 def insertionSort1(n, arr):
-    j = n-1
-    sort = arr[j]
-    for i in range(j, -1, -1):
-        if sort < arr[i-1] and i >=1:
-            arr[i] = arr[i-1]
-            print(' '.join(str(x) for x in arr))
-        else:
-            arr[i] = sort
-            print(' '.join(str(x) for x in arr))
-            break
+    value = arr[-1]
+    i = n-1
+    while i > 0 and arr[i-1] > value:
+        arr[i] = arr[i-1]
+        print(*arr)
+        i -=1
+    arr[i] = value
+    print(*arr)
+        
             
 if __name__ == '__main__':
     n = int(input().strip())
